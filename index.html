@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only One</title>
+  </head>
+  <style>
+    body{
+        background-color: rgb(240, 241, 247);
+
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #logo {
+      width: 50%;
+      padding: 5px;
+    }
+    .headertop {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+    }
+    #serachbox {
+      width: 250%;
+      padding: 12px;
+      border-radius: 38px;
+      position: relative;
+      left: -250px;
+    }
+    input {
+      background-color: rgb(240, 241, 247);
+    }
+    .headerbottom {
+      display: flex;
+      /* justify-content: space-evenly; */
+      width: 100%;
+      height: 40px;
+      /* border: 3px solid blue; */
+      text-align: center;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+    /* .headerbottom>div{
+        border: 3px solid blue;
+        width:30% ;
+    } */
+    .headerbottom > div:nth-child(1) {
+      /* border: 3px solid blue; */
+      width: 10%;
+      align-items: center;
+      /* text-align: center; */
+    }
+    .headerbottom > div:nth-child(2) {
+      /* border: 3px solid blue; */
+      width: 50%;
+      position: relative;
+      left: 60px;
+    }
+    .headerbottom > div:nth-child(3) {
+      /* border: 3px solid blue; */
+      width: 35%;
+      position: relative;
+      left: 60px;
+    }
+    #brandstores {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    #brandstores > p {
+      font-size: small;
+    }
+    .signordercard {
+      display: flex;
+      justify-content: space-around;
+    }
+    #headersection {
+      background-color: rgb(240, 241, 247);
+      background-attachment: fixed;
+    }
+    /* middle text part */
+    #middletext {
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+      background-color: #dbdeed;
+    }
+    /* middle box part  */
+    #middle-box {
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 35px 0 10px 0;
+    }
+    #middle-box img {
+      width: 100%;
+      height: 300px;
+    }
+    #casbackicon {
+      width: 20%;
+    }
+    /* middle part 2 css */
+    .middlepart-1{
+        display: flex;
+        justify-content: space-between;
+        margin-top:40px;
+    }
+    .middlepart-1>div{
+        display: flex;
+        height: 300px;
+        width: 24%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* border: 2px solid red; */
+    }
+    .middlepart-1>div>div>img{
+        width: 100%;
+    }
+    #box1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    #onecartstore{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    #onecartstore>img{
+       width: 100%;
+       height: 300px;
+    }
+    #lastonecard>img{
+       width: 100%;
+       height: 300px;
+    }
+    .middle-part-2{
+        display: flex;
+        justify-content:space-evenly;
+        text-align: center;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        /* padding: 20px; */
+        margin-top: 30px;
+    }
+    .middle-part-2>img{
+        width: 120%;
+    }
+    .middlepart-3{
+        text-align: center;
+        padding: 30px;
+        margin-top: 30px;
+    }
+    #cards-middle-3{
+        display: flex   ;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    #cards-middle-3>div{
+     padding: 5px;
+    }
+
+    #cards-middle-3>div>img{
+        width: 95%;
+    height: 170px;
+    border: 6px solid #cbcdd4;
+    border-radius: 50%;
+    }
+    /* card slider there comes  */
+    .cardslider{
+        border: 2px solid red ;
+        width: 100%;
+        height: 350px;
+    }
+    /* here cards part  */
+    .cardsparts{
+        display: flex;
+        width: 95%;
+        padding: 10px;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: auto;
+
+    }
+    .cardsparts>div{
+        
+        padding: 10px;
+        text-align: center;
+
+    }
+    .cardsparts>div>img{
+        width: 100%;
+    }
+    .lastcardsproducts{
+        text-align: center;
+        padding: 10px;
+        background-color:white;
+    }
+    .lastcardsproducts>h1{
+        padding: 20px;
+    }
+    #cardsitems{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    #cardsitems>div>img{
+     width: 100%;
+    }
+  .footer{
+    background-color: #545871;
+    height: 120px;
+  }
+  #first>div{
+    display: flex;
+    color: white;
+  }
+
+  #first{
+    display: flex;
+  }
+  #first input{
+    padding: 5px;
+  }
+  #first>div>div>h5{
+   padding-top: 10px;
+  }
+  li{
+    list-style: circle;
+  }
+  
+  .lastimagesection{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    width: 60%;
+  }
+  .lastimagesection>div>img{
+    width: 100%;
+    height: 110px;
+  }
+  #digitalgate{
+    justify-content: space-evenly;
+    display: flex;
+    margin:auto;
+  }
+ 
+
+   
+       
+  </style>
+  <body>
+    <header id="headersection">
+      <div class="mainheader">
+        <!-- top section of header -->
+        <div class="headertop">
+          <div>
+            <img
+              id="logo"
+              src="https://img.shop.com/Image/resources/logos/shop-logo-us-thanksgiving.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <input
+              id="serachbox"
+              type="text"
+              name="Search here"
+              placeholder=" Search SHOP.COM...                                                                                      🔍"
+            />
+          </div>
+          <div>
+            <img src="https://www.shop.com/feo-cdn/Z/t/BZP3JZ4so.webp" alt="" />
+          </div>
+        </div>
+        <!-- here is the bottom part of the header -->
+        <div class="headerbottom">
+          <div>
+            <img
+              id="hambergerimg"
+              src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg"
+              alt=""
+            />Category
+          </div>
+          <div id="brandstores">
+            <p>Exclusive Brands</p>
+            <p>Stores</p>
+            <p>Deals</p>
+            <p>SHOP Travel</p>
+            <p>Departments</p>
+            <p>ShopBuddy</p>
+            <p>SHOP Local</p>
+          </div>
+          <div class="signordercard">
+            <div>
+              <img
+                src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
+                alt=""
+              />Signup
+            </div>
+            <div>
+              <img
+                src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
+                alt=""
+              />Order
+            </div>
+            <div>
+              <img
+                src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
+                alt=""
+              />Cart
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- middle part started here -->
+    <div id="middletext">
+      <div>Your Shop Consultant is <span>SHOP.COM</span></div>
+      <div>Earn up to<span>50% Cashback </span> on eligible purchases.</div>
+    </div>
+    <div id="middle-box">
+      <!-- middle part  -->
+      <h2>$50,009,502 awarded as Cashback</h2>
+      <div>
+        <img
+          src="https://img.shop.com/Image/homepage/Shop-usa-100082-thanksgiving-lp-banners-uf-hero-min1666623154719.jpg"
+          alt="thanks image"
+        />
+      </div>
+    </div>
+
+    <!-- middle part 2  -->
+   <div class="middlepart-1">
+  
+       <div id="box1">
+        <div><img src="https://img.shop.com/Image/280000/289000/289054/products/1913420185.jpg?plain&size=400x400" alt=""><a href="">Shopping Annuity</a></div>
+        <div><img src="https://img.shop.com/Image/240000/248600/248698/products/1887211674.jpg?plain&size=400x400" alt=""><a href="">Lumere de Vie</a></div>
+        <div><img src="https://img.shop.com/Image/240000/247900/247927/products/1943471616.jpg?plain&size=400x400" alt=""><a href="">Premium Biotin</a></div>
+        <div><img src="https://img.shop.com/Image/250000/250100/250199/products/1332818472.jpg?plain&size=400x400" alt=""><a href="">DNA Miracles</a></div>
+     </div>
+ 
+     <!-- div2 -->
+     <div>
+        <div><img src="https://img.shop.com/Image/departments/Beauty.jpg" alt=""><a href="">Beauty</a></div>
+     </div>
+     <!-- div 3 -->
+     <div id="onecartstore">
+         <img src="https://www.shop.com/feo-cdn/j/q/eXmpgXAAE.jpg" alt="">
+     </div>
+     <div id="lastonecard">
+        <img src="https://img.shop.com/Image/homepage/sa-usa-103713-pain-relief-spray-lg-media1664464729834.jpg" alt="">
+     </div>
+   </div>
+    <div class="middle-part-2">
+       <div>
+        <img src="https://www.shop.com/feo-cdn/w/_/d2ZGbuO-Q.webp" alt="">
+        <h6>6%.00 Cashback</h6>
+        <p>Free Shipping on all Orders $25+ </p>
+       </div>
+       <div>
+        <img src="https://www.shop.com/feo-cdn/r/y/3KsTpsCmE.jpg" alt="">
+       <h6>4%.00 Cashback</h6>
+        <p>10% Off $100 Order + free shipping on orders over $45 Code: HolidaySavings </p>
+       </div>
+       <div>
+        <img src="https://www.shop.com/feo-cdn/y/a/u6hvxtGS4.webp" alt="">
+        <h6>9%.00 Cashback</h6>
+        <p>Oven Ready Roasts & Showpiece Mains for this Thanksgiving! Order by 11/11 </p>
+       </div>
+    </div>
+
+    <div class="middle-part-2">
+        <div>
+         <img src="https://www.shop.com/feo-cdn/N/7/sE1fOmPhA.jpg" alt="">
+        
+        </div>
+        <div>
+         <img src="https://www.shop.com/feo-cdn/d/Y/AsftFQ1uc.webp" alt="">
+      
+        </div>
+        <div>
+         <img src="https://www.shop.com/feo-cdn/p/O/pYwDnWPhg.webp" alt="">
+      
+        </div>
+     </div>
+
+     <div class="middlepart-3">
+        <h1>Gift Ideas</h1>
+        <div id="cards-middle-3">
+           <div><img src="https://www.shop.com/feo-cdn/t/b/bOOcKZ1A0.webp" alt=""><h5>ELECTRONICS GIFTS</h5></div>
+           <div><img src="https://www.shop.com/feo-cdn/W/H/_6el9zKss.webp" alt=""><h5> GIFTS UNDER 250$</h5></div>
+           <div><img src="https://www.shop.com/feo-cdn/i/p/N4AyBQQC8.webp" alt=""><h5>GIFTS UNDER 25$</h5></div>
+           <div><img src="https://www.shop.com/feo-cdn/M/Q/pb_1UnmK8.webp" alt=""><h5>GIFTS UNDER 50$</h5></div>
+           <!-- <div><img src="https://www.shop.com/feo-cdn/n/h/bi8dGCn6c.webp" alt=""><h5>
+            STUCKING STUFFER
+           </h5></div> -->
+           <div><img src="https://www.shop.com/feo-cdn/A/v/wiZ8D0MpI.webp" alt=""><h5> GIFTS FOR THE FAMILY</h5></div>
+        </div>
+     </div>
+ <!-- cardslider there  -->
+   <div class="cardslider">
+       <h1>cardslider</h1>
+   </div>
+     
+   <!-- card showing  -->
+   <div class="cardsparts">
+    <div>
+     <img src="https://www.shop.com/feo-cdn/7/3/gQtl0rh2w.webp" alt="">
+    
+    </div>
+    <div>
+     <img src="https://www.shop.com/feo-cdn/f/l/tsh8ETjfs.webp" alt="">
+  
+    </div>
+    <div>
+     <img src="https://www.shop.com/feo-cdn/q/3/7qNR_u7Lw.jpg" alt="">
+  
+    </div>
+    <div>
+        <img src="https://www.shop.com/feo-cdn/q/m/iYG7eIAwc.jpg" alt="">
+     
+       </div>
+ </div>
+ <!-- another slider there  -->
+     <div class="cardslider">
+     <h1>cardslider 2</h1>
+      </div>
+      <!-- here comes last cards products  -->
+      <div class="lastcardsproducts">
+        <h1>Our Brands</h1>
+        <div id="cardsitems">
+           <div>
+            <h3>Health & Nutrition</h3>
+            <img src="https://www.shop.com/feo-cdn/5/m/AdeGaxB0k.webp" alt="img">
+           </div>
+           <div>
+            <h3>Beauty</h3>
+            <img src="https://www.shop.com/feo-cdn/I/w/FMNtlJMyg.webp" alt="img">
+           </div>
+           <div>
+            <h3>Home & Cleaning</h3>
+            <img src="https://www.shop.com/feo-cdn/E/h/X3I9yfsR0.webp" alt="img">
+           </div>
+           <div>
+            <h3>Baby & Kids</h3>
+            <img src="https://www.shop.com/feo-cdn/H/G/L4_BhKWco.webp" alt="img">
+           </div>
+           <div>
+            <h3>Jewellery</h3>
+            <img src="https://www.shop.com/feo-cdn/4/4/HXrw3sPbY.webp" alt="img">
+           </div>
+         
+        </div>
+      </div>
+      
+      <!-- ending part footer -->
+      <div class="footer">
+        <div id="first">
+      <div>
+        <div><h5>Get Email Deals & Earn Cashback</h5></div>
+       <div> <input id ='footerEmail' type="text" placeholder="enter email address     ✉️ "></div>
+      </div>
+        </div>
+      </div>
+     
+      <!-- lastlogog image section  -->
+      <div class="lastimagesection">
+        <div><img src="https://www.shop.com/feo-cdn/7/F/BIyWLz__s.webp" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/B/L/K5pf_0c94.webp" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/m/S/eK8gl_JjY.webp" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/0/q/U9W4qM8Kw.webp" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/B/0/gcyjKyFgc.png" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/N/z/XfD9Uvd_o.webp" alt=""></div>
+        <div><img src="https://www.shop.com/feo-cdn/K/F/E44Pe49Qs.webp" alt=""></div>
+      </div>
+      <div id="digitalgate">
+          <img src="project.jpg" alt="">
+      </div>
+  </body>
+</html>
