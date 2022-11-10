@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Only One</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <style>
     body{
         background-color: rgb(240, 241, 247);
+        font-family: 'PT Sans', sans-serif;
 
     }
     * {
@@ -54,6 +56,12 @@
       align-items: center;
       /* text-align: center; */
     }
+ 
+    .headerbottom > div:nth-child(1)>img {
+        position: relative;
+        bottom: -6px;
+    }
+    
     .headerbottom > div:nth-child(2) {
       /* border: 3px solid blue; */
       width: 50%;
@@ -73,9 +81,15 @@
     #brandstores > p {
       font-size: small;
     }
+    .signordercard>div:hover{
+        color: aqua;
+
+    }
     .signordercard {
       display: flex;
       justify-content: space-around;
+      font-size: small;
+      
     }
     #headersection {
       background-color: rgb(240, 241, 247);
@@ -85,6 +99,7 @@
     #middletext {
       display: flex;
       padding: 5px;
+      font-size: small;
       justify-content: space-between;
       background-color: #dbdeed;
     }
@@ -209,7 +224,7 @@
     }
   .footer{
     background-color: #545871;
-    height: 120px;
+    height: 230px;
   }
   #first>div{
     display: flex;
@@ -246,10 +261,31 @@
     display: flex;
     margin:auto;
   }
- 
+  #fotersecond{
+    padding-left: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+  }
+  li>a{
+    color: white;
+  }
+  li{
+    padding: 5px;
+  }
+  #sociallinks>div{
+    display: flex;
+    justify-content: center;
 
-   
-       
+  }
+  #sociallinks>div>div>img{
+    height: 50%;
+    height: 120px;
+
+  }
+
   </style>
   <body>
     <header id="headersection">
@@ -295,22 +331,30 @@
           </div>
           <div class="signordercard">
             <div>
-              <img
+              <!-- <img
                 src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
                 alt=""
-              />Signup
+              /> -->
+              <a href="signup.html"><img
+                src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
+                alt=""
+              /></a>
+
+              <p><a href="signup.html">Signup</a></p>
             </div>
             <div>
               <img
                 src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
                 alt=""
-              />Order
+              />
+              <p>Order</p>
             </div>
             <div>
               <img
                 src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
                 alt=""
-              />Cart
+              />
+              <p>Cart</p>
             </div>
           </div>
         </div>
@@ -461,8 +505,43 @@
         <div id="first">
       <div>
         <div><h5>Get Email Deals & Earn Cashback</h5></div>
-       <div> <input id ='footerEmail' type="text" placeholder="enter email address     ✉️ "></div>
+       <div> <input id ='footerEmail' type="text" placeholder="enter email address     ✉️ "></div> 
       </div>
+    
+        </div>
+        <!-- div 2  -->
+        <div id="fotersecond">
+            <div>
+                <h1>More info</h1>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Country/Region</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Own Your Shop Site</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h1>More info</h1>
+                <ul>
+                    <li><a href="">Own Your Shop Site</a></li>
+                    <li><a href="">Partner with us </a></li>
+                    <li><a href="">Connect</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h1>More info</h1>
+                <ul>
+                    <li><a href="">Own Your Shop Site</a></li>
+                    <li><a href="">Partner with us </a></li>
+                    <li><a href="">Connect</a></li>
+
+
+                </ul>
+            </div>
+          
         </div>
       </div>
      

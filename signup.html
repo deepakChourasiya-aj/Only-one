@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <style>
+    body {
+      font-family: "PT Sans", sans-serif;
+    }
+    a {
+      color: black;
+    }
+    .signuppage {
+      height: 350px;
+      width: 60%;
+      /* border: 2px solid red; */
+      margin-top: 100px;
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+      margin-left: 150px;
+    }
+    .signuppage > div {
+      width: 49%;
+      height: 345px;
+      /* border: 2px solid black; */
+    }
+    label {
+      display: block;
+      font-size: 0.875rem;
+      margin: 5px, 0;
+      padding: 2px;
+      font-size: small;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    input {
+      width: 90%;
+      height: 25px;
+      /* margin-left: 2px; */
+      border-radius: 2px;
+      border: 1px solid black;
+      /* border-style: ; */
+    }
+    h2 {
+      color: #414467;
+    }
+    #signinbutton {
+      text-align: center;
+      /* margin-left: 2px; */
+      background-color: #414467;
+      width: 90%;
+      color: white;
+      padding: 4px;
+      margin-top: 30px;
+      font-size: medium;
+      border-radius: 15px;
+    }
+    #loginbutton {
+      text-align: center;
+      /* margin-left: 2px; */
+      background-color: #414467;
+      width: 90%;
+      color: white;
+      padding: 4px;
+      margin-top: 10px;
+      font-size: medium;
+      border-radius: 15px;
+    }
+    #signinbutton:hover {
+      background-color: #e3be1c;
+    }
+    #rightcontent {
+      font-size: small;
+      margin-top: 40px;
+      padding: 10px;
+    }
+    #createaccout {
+      text-align: center;
+      /* margin-left: 2px; */
+      background-color: white;
+      width: 60%;
+      color: 414467;
+      padding: 4px;
+      /* margin-top: 30px; */
+      font-size: medium;
+      border-radius: 15px;
+    }
+    #createaccout:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="signuppage">
+      <!-- first div -->
+      <div class="dataform">
+        <h2>Sign in</h2>
+        <form action="" id="form">
+          <label for="email"> Email address</label>
+          <input
+            type="email"
+            placeholder="yourname@example.com "
+            name="email"
+            id="emial"
+          />
+          <label for="pwrd"> Password : </label>
+          <input type="password" name="password" id="password" />
+
+          <button type="submit" id="signinbutton">Sign in</button>
+          <button type="submit" id="loginbutton">
+            <a href="login.html">Sign in</a>
+          </button>
+        </form>
+      </div>
+      <!-- 2 nd div -->
+      <div>
+        <div id="rightcontent">
+          <h2>Don't have an account?</h2>
+          <p>
+            With a SHOP.COM account, you can enjoy the following benefits: up to
+            50% Cashback on eligible purchases, redeem discount coupons, order
+            status and history, saved payment options and addresses, exclusive
+            emails and more. <a href="">Learn more</a>
+          </p>
+          <button id="createaccout">Create new Account</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="signup.js"></script>
