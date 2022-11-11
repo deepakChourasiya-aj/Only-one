@@ -80,6 +80,7 @@
     }
     #brandstores > p {
       font-size: small;
+      cursor: pointer;
     }
     .signordercard>div:hover{
         color: aqua;
@@ -93,8 +94,12 @@
     }
     #headersection {
       background-color: rgb(240, 241, 247);
+      position: fixed;
+      width: 100%;
       background-attachment: fixed;
     }
+
+    /* header end  */
     /* middle text part */
     #middletext {
       display: flex;
@@ -183,9 +188,15 @@
     }
     /* card slider there comes  */
     .cardslider{
-        border: 2px solid red ;
+        /* border: 2px solid red ; */
         width: 100%;
-        height: 350px;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+    .cardslider>h1{
+      padding: 10px;
+
     }
     /* here cards part  */
     .cardsparts{
@@ -195,8 +206,21 @@
         justify-content: space-evenly;
         text-align: center;
         margin: auto;
+        padding: 10px;
+    }
+    #leftslider>img{
+      width: 100%;
+    }
+    #rigthslider{
+      /* width: 70%; */
+       display: flex;
+       text-align: center;
 
     }
+    #rigthslider>div>img{
+      width: 90%;
+    }
+    /* --------------------------------- */
     .cardsparts>div{
         
         padding: 10px;
@@ -283,7 +307,16 @@
   #sociallinks>div>div>img{
     height: 50%;
     height: 120px;
-
+  }
+  .sliderinsider{
+    display: flex;
+    /* justify-content: ; */
+  }
+  .cardslider{
+    justify-content: center;
+  }
+  .sliderinsider>div>img{
+    width: 100%;
   }
 
   </style>
@@ -295,9 +328,10 @@
           <div>
             <img
               id="logo"
-              src="https://img.shop.com/Image/resources/logos/shop-logo-us-thanksgiving.svg"
+              src="newlogo.png"
               alt=""
             />
+            <!-- https://img.shop.com/Image/resources/logos/shop-logo-us-thanksgiving.svg -->
           </div>
           <div>
             <input
@@ -321,13 +355,13 @@
             />Category
           </div>
           <div id="brandstores">
-            <p>Exclusive Brands</p>
-            <p>Stores</p>
-            <p>Deals</p>
-            <p>SHOP Travel</p>
-            <p>Departments</p>
-            <p>ShopBuddy</p>
-            <p>SHOP Local</p>
+            <p onclick="cardPage()">Exclusive Brands</p>
+            <p onclick="cardPage()">Stores</p>
+            <p onclick="cardPage()">Deals</p>
+            <p onclick="cardPage()">SHOP Travel</p>
+            <p onclick="cardPage()">Departments</p>
+            <p onclick="cardPage()">ShopBuddy</p>
+            <p onclick="cardPage()">SHOP Local</p>
           </div>
           <div class="signordercard">
             <div>
@@ -340,17 +374,19 @@
                 alt=""
               /></a>
 
-              <p><a href="signup.html">Signup</a></p>
+              <!-- <p><a href="signup.html">Signup</a></p> -->
+              <p onclick="Pagedir()">Signup</p>
+
             </div>
             <div>
-              <img
+              <img 
                 src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
                 alt=""
               />
               <p>Order</p>
             </div>
             <div>
-              <img
+              <img 
                 src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
                 alt=""
               />
@@ -369,7 +405,7 @@
       <!-- middle part  -->
       <h2>$50,009,502 awarded as Cashback</h2>
       <div>
-        <img
+        <img onclick="cardPage()"
           src="https://img.shop.com/Image/homepage/Shop-usa-100082-thanksgiving-lp-banners-uf-hero-min1666623154719.jpg"
           alt="thanks image"
         />
@@ -380,53 +416,54 @@
    <div class="middlepart-1">
   
        <div id="box1">
-        <div><img src="https://img.shop.com/Image/280000/289000/289054/products/1913420185.jpg?plain&size=400x400" alt=""><a href="">Shopping Annuity</a></div>
-        <div><img src="https://img.shop.com/Image/240000/248600/248698/products/1887211674.jpg?plain&size=400x400" alt=""><a href="">Lumere de Vie</a></div>
-        <div><img src="https://img.shop.com/Image/240000/247900/247927/products/1943471616.jpg?plain&size=400x400" alt=""><a href="">Premium Biotin</a></div>
-        <div><img src="https://img.shop.com/Image/250000/250100/250199/products/1332818472.jpg?plain&size=400x400" alt=""><a href="">DNA Miracles</a></div>
+        <!-- <a href="" style="font-size: 10px;">Shopping Annuity</a> -->
+        <div><img onclick="cardPage()" src="https://img.shop.com/Image/280000/289000/289054/products/1913420185.jpg?plain&size=400x400" alt=""></div>
+        <div><img onclick="cardPage()" src="https://img.shop.com/Image/240000/248600/248698/products/1887211674.jpg?plain&size=400x400" alt=""></div>
+        <div><img onclick="cardPage()" src="https://img.shop.com/Image/240000/247900/247927/products/1943471616.jpg?plain&size=400x400" alt=""></div>
+        <div><img onclick="cardPage()" src="https://img.shop.com/Image/250000/250100/250199/products/1332818472.jpg?plain&size=400x400" alt="" ></div>
      </div>
  
      <!-- div2 -->
      <div>
-        <div><img src="https://img.shop.com/Image/departments/Beauty.jpg" alt=""><a href="">Beauty</a></div>
+        <div><img onclick="cardPage()" src="https://img.shop.com/Image/departments/Beauty.jpg" alt=""><a href="">Beauty</a></div>
      </div>
      <!-- div 3 -->
      <div id="onecartstore">
-         <img src="https://www.shop.com/feo-cdn/j/q/eXmpgXAAE.jpg" alt="">
+         <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/j/q/eXmpgXAAE.jpg" alt="">
      </div>
      <div id="lastonecard">
-        <img src="https://img.shop.com/Image/homepage/sa-usa-103713-pain-relief-spray-lg-media1664464729834.jpg" alt="">
+        <img  onclick="cardPage()" src="https://img.shop.com/Image/homepage/sa-usa-103713-pain-relief-spray-lg-media1664464729834.jpg" alt="">
      </div>
    </div>
     <div class="middle-part-2">
        <div>
-        <img src="https://www.shop.com/feo-cdn/w/_/d2ZGbuO-Q.webp" alt="">
+        <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/w/_/d2ZGbuO-Q.webp" alt="">
         <h6>6%.00 Cashback</h6>
         <p>Free Shipping on all Orders $25+ </p>
        </div>
        <div>
-        <img src="https://www.shop.com/feo-cdn/r/y/3KsTpsCmE.jpg" alt="">
+        <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/r/y/3KsTpsCmE.jpg" alt="">
        <h6>4%.00 Cashback</h6>
-        <p>10% Off $100 Order + free shipping on orders over $45 Code: HolidaySavings </p>
+        <p>10% Off $100 Order + free shipping </p>
        </div>
        <div>
-        <img src="https://www.shop.com/feo-cdn/y/a/u6hvxtGS4.webp" alt="">
+        <img  onclick="cardPage()" src="https://www.shop.com/feo-cdn/y/a/u6hvxtGS4.webp" alt="">
         <h6>9%.00 Cashback</h6>
-        <p>Oven Ready Roasts & Showpiece Mains for this Thanksgiving! Order by 11/11 </p>
+          <p>Oven Ready Roasts Order by 11/11 </p>
        </div>
     </div>
 
     <div class="middle-part-2">
         <div>
-         <img src="https://www.shop.com/feo-cdn/N/7/sE1fOmPhA.jpg" alt="">
+         <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/N/7/sE1fOmPhA.jpg" alt="">
         
         </div>
         <div>
-         <img src="https://www.shop.com/feo-cdn/d/Y/AsftFQ1uc.webp" alt="">
+         <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/d/Y/AsftFQ1uc.webp" alt="">
       
         </div>
         <div>
-         <img src="https://www.shop.com/feo-cdn/p/O/pYwDnWPhg.webp" alt="">
+         <img onclick="cardPage()"  src="https://www.shop.com/feo-cdn/p/O/pYwDnWPhg.webp" alt="">
       
         </div>
      </div>
@@ -434,10 +471,10 @@
      <div class="middlepart-3">
         <h1>Gift Ideas</h1>
         <div id="cards-middle-3">
-           <div><img src="https://www.shop.com/feo-cdn/t/b/bOOcKZ1A0.webp" alt=""><h5>ELECTRONICS GIFTS</h5></div>
-           <div><img src="https://www.shop.com/feo-cdn/W/H/_6el9zKss.webp" alt=""><h5> GIFTS UNDER 250$</h5></div>
-           <div><img src="https://www.shop.com/feo-cdn/i/p/N4AyBQQC8.webp" alt=""><h5>GIFTS UNDER 25$</h5></div>
-           <div><img src="https://www.shop.com/feo-cdn/M/Q/pb_1UnmK8.webp" alt=""><h5>GIFTS UNDER 50$</h5></div>
+           <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/t/b/bOOcKZ1A0.webp" alt=""><h5>ELECTRONICS GIFTS</h5></div>
+           <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/W/H/_6el9zKss.webp" alt=""><h5> GIFTS UNDER 250$</h5></div>
+           <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/i/p/N4AyBQQC8.webp" alt=""><h5>GIFTS UNDER 25$</h5></div>
+           <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/M/Q/pb_1UnmK8.webp" alt=""><h5>GIFTS UNDER 50$</h5></div>
            <!-- <div><img src="https://www.shop.com/feo-cdn/n/h/bi8dGCn6c.webp" alt=""><h5>
             STUCKING STUFFER
            </h5></div> -->
@@ -446,31 +483,58 @@
      </div>
  <!-- cardslider there  -->
    <div class="cardslider">
-       <h1>cardslider</h1>
+       <h1 >Luxury Beauty Gifts from Motives</h1>
+       <div class="sliderinsider">
+        <div id="leftslider"><img onclick="cardPage()" src="https://img.shop.com/Image/homepage/motives-usa-can-eng-105076-2022-holiday-banner-600x600-img-min1666019864593.jpg " alt=""></div>
+        <div id="rigthslider">
+          <div><img onclick="cardPage()" src="https://img.shop.com/Image/240000/243300/243380/products/1942133519.jpg?plain&size=600x600" alt="">
+            <p>Motives® X Amber Essential Collection</p>
+            <p>$20</p>
+          </div>
+          <div><img  onclick="cardPage()" src="https://img.shop.com/Image/240000/243300/243380/products/1939204281.jpg?plain&size=600x600" alt="">
+            <p>Motives® X Amber Essential Collection</p>
+            <p>$20</p></div>
+           
+        </div>
+       </div>
+
    </div>
      
    <!-- card showing  -->
    <div class="cardsparts">
     <div>
-     <img src="https://www.shop.com/feo-cdn/7/3/gQtl0rh2w.webp" alt="">
+     <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/7/3/gQtl0rh2w.webp" alt="">
     
     </div>
     <div>
-     <img src="https://www.shop.com/feo-cdn/f/l/tsh8ETjfs.webp" alt="">
+     <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/f/l/tsh8ETjfs.webp" alt="">
   
     </div>
     <div>
-     <img src="https://www.shop.com/feo-cdn/q/3/7qNR_u7Lw.jpg" alt="">
+     <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/q/3/7qNR_u7Lw.jpg" alt="">
   
     </div>
     <div>
-        <img src="https://www.shop.com/feo-cdn/q/m/iYG7eIAwc.jpg" alt="">
+        <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/q/m/iYG7eIAwc.jpg" alt="">
      
        </div>
  </div>
  <!-- another slider there  -->
      <div class="cardslider">
-     <h1>cardslider 2</h1>
+      <h1 >Iconic Pieces from Layered</h1>
+      <div class="sliderinsider">
+       <div id="leftslider"><img onclick="cardPage()" src="https://img.shop.com/Image/homepage/layered-usa-105249-ambers-favorites-banner-600x600-img-min1666023332340.jpg " alt=""></div>
+       <div id="rigthslider">
+         <div><img onclick="cardPage()" src="https://img.shop.com/Image/280000/282000/282022/products/1932866519.jpg?plain&size=600x600" alt="">
+           <p>Motives® X Amber Essential Collection</p>
+           <p>$20</p>
+         </div>
+         <div><img onclick="cardPage()" src="https://img.shop.com/Image/280000/282000/282022/products/1943471860.jpg?plain&size=600x600" alt="">
+           <p>Motives® X Amber Essential Collection</p>
+           <p>$20</p></div>
+          
+       </div>
+      </div>
       </div>
       <!-- here comes last cards products  -->
       <div class="lastcardsproducts">
@@ -478,23 +542,23 @@
         <div id="cardsitems">
            <div>
             <h3>Health & Nutrition</h3>
-            <img src="https://www.shop.com/feo-cdn/5/m/AdeGaxB0k.webp" alt="img">
+            <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/5/m/AdeGaxB0k.webp" alt="img">
            </div>
            <div>
             <h3>Beauty</h3>
-            <img src="https://www.shop.com/feo-cdn/I/w/FMNtlJMyg.webp" alt="img">
+            <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/I/w/FMNtlJMyg.webp" alt="img">
            </div>
            <div>
             <h3>Home & Cleaning</h3>
-            <img src="https://www.shop.com/feo-cdn/E/h/X3I9yfsR0.webp" alt="img">
+            <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/E/h/X3I9yfsR0.webp" alt="img">
            </div>
            <div>
             <h3>Baby & Kids</h3>
-            <img src="https://www.shop.com/feo-cdn/H/G/L4_BhKWco.webp" alt="img">
+            <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/H/G/L4_BhKWco.webp" alt="img">
            </div>
            <div>
             <h3>Jewellery</h3>
-            <img src="https://www.shop.com/feo-cdn/4/4/HXrw3sPbY.webp" alt="img">
+            <img onclick="cardPage()" src="https://www.shop.com/feo-cdn/4/4/HXrw3sPbY.webp" alt="img">
            </div>
          
         </div>
@@ -547,16 +611,27 @@
      
       <!-- lastlogog image section  -->
       <div class="lastimagesection">
-        <div><img src="https://www.shop.com/feo-cdn/7/F/BIyWLz__s.webp" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/B/L/K5pf_0c94.webp" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/m/S/eK8gl_JjY.webp" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/0/q/U9W4qM8Kw.webp" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/B/0/gcyjKyFgc.png" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/N/z/XfD9Uvd_o.webp" alt=""></div>
-        <div><img src="https://www.shop.com/feo-cdn/K/F/E44Pe49Qs.webp" alt=""></div>
+        <div ><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/7/F/BIyWLz__s.webp" alt=""></div>
+        <div><img  onclick="cardPage()" src="https://www.shop.com/feo-cdn/B/L/K5pf_0c94.webp" alt=""></div>
+        <div><img onclick="cardPage()"  src="https://www.shop.com/feo-cdn/m/S/eK8gl_JjY.webp" alt=""></div>
+        <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/0/q/U9W4qM8Kw.webp" alt=""></div>
+        <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/B/0/gcyjKyFgc.png" alt=""></div>
+        <div><img onclick="cardPage()" src="https://www.shop.com/feo-cdn/N/z/XfD9Uvd_o.webp" alt=""></div>
+        <div><img  onclick="cardPage()" src="https://www.shop.com/feo-cdn/K/F/E44Pe49Qs.webp" alt=""></div>
       </div>
       <div id="digitalgate">
           <img src="project.jpg" alt="">
       </div>
   </body>
 </html>
+
+
+<script>
+  function Pagedir(){
+    window.location.href ='login.html';
+  }
+
+  function cardPage(){
+    window.location.href= 'cards.html';
+  }
+</script>
