@@ -112,10 +112,8 @@
           <input type="password" name="password" id="password" />
 
           <button type="submit" id="signinbutton">Sign in</button>
-          <button type="submit" id="loginbutton">
-            <a href="login.html">Sign in</a>
-          </button>
         </form>
+        <button onclick="RediLogin()" id="loginbutton">Login</button>
       </div>
       <!-- 2 nd div -->
       <div>
@@ -133,4 +131,9 @@
     </div>
   </body>
 </html>
+<script>
+  function RediLogin(){
+    window.location.href = 'login.html';
+}
+</script>
 <script src="signup.js"></script>
