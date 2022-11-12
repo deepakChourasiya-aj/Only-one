@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CartTotal</title>
-</head>
-<style>
-  body{
-        font-family: 'PT Sans', sans-serif;
-
+  </head>
+  <style>
+    body {
+      font-family: "PT Sans", sans-serif;
     }
 
     /* header */
-    body{
-        /* background-color: rgb(240, 241, 247); */
-        font-family: 'PT Sans', sans-serif;
-
+    body {
+      /* background-color: rgb(240, 241, 247); */
+      font-family: "PT Sans", sans-serif;
     }
     * {
       margin: 0;
@@ -61,12 +59,12 @@
       align-items: center;
       /* text-align: center; */
     }
- 
-    .headerbottom > div:nth-child(1)>img {
-        position: relative;
-        bottom: -6px;
+
+    .headerbottom > div:nth-child(1) > img {
+      position: relative;
+      bottom: -6px;
     }
-    
+
     .headerbottom > div:nth-child(2) {
       /* border: 3px solid blue; */
       width: 50%;
@@ -87,15 +85,13 @@
       font-size: small;
       cursor: pointer;
     }
-    .signordercard>div:hover{
-        color: aqua;
-
+    .signordercard > div:hover {
+      color: aqua;
     }
     .signordercard {
       display: flex;
       justify-content: space-around;
       font-size: small;
-      
     }
     #headersection {
       background-color: rgb(240, 241, 247);
@@ -103,35 +99,35 @@
       width: 100%;
       background-attachment: fixed;
     }
-    select{
+    select {
       padding: 8px;
-    width: 15%;
-    border: 2px solid wheat;
-    border-radius: 5px;
-    background-color: cornsilk;
-    font-size: larger;
+      width: 15%;
+      border: 2px solid wheat;
+      border-radius: 5px;
+      background-color: cornsilk;
+      font-size: larger;
     }
 
     /* header */
-    button{
+    button {
       background-color: #414467;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 20px;
-    width: 105px;
-    height: 33px;
-       }
-        #container {
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 20px;
+      width: 105px;
+      height: 33px;
+    }
+    #container {
       display: grid;
-      justify-content:flex-end;
+      justify-content: flex-end;
       align-items: flex-end;
-      margin: auto;
+      margin-left: 10px;
       margin-top: 50px;
       grid-template-columns: repeat(3, 1fr);
-      width: 90%;
+      width: 70%;
       grid-template-rows: auto;
-      gap: 20px;
+      gap: 18px;
     }
     #container > div > img {
       width: 100%;
@@ -143,145 +139,141 @@
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       font-size: small;
     }
-    .displaytotal{
+    .displaytotal {
       text-align: center;
-      /* display: flex; */
-      width: 17%;
       position: relative;
-      left: 80%;
+      left: 75%;
+      color: white;
       height: 100px;
+      top: 170px;
       border-radius: 20px;
-      background-color: rgb(222, 130, 10);
-      border: 2px solid red ;
-      /* width: 15%; */
+      background-color: rgb(212, 209, 144);
+      /* border: 2px solid red ; */
+      width: 20%;
     }
-   
-</style>
-<body>
-
-  <header id="headersection">
-    <div class="mainheader">
-      <!-- top section of header -->
-      <div class="headertop">
-        <div>
-          <img
-            id="logo"
-            src="https://img.shop.com/Image/resources/logos/shop-logo-us-thanksgiving.svg"
-            alt=""
-          />
-        </div>
-        <div>
-          <input
-            id="serachbox"
-            type="text"
-            name="Search here"
-            placeholder=" Search SHOP.COM...                                                                                      🔍"
-          />
-        </div>
-        <div>
-          <img src="https://www.shop.com/feo-cdn/Z/t/BZP3JZ4so.webp" alt="" />
-        </div>
-      </div>
-      <!-- here is the bottom part of the header -->
-      <div class="headerbottom">
-        <div>
-          <img
-            id="hambergerimg"
-            src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg"
-            alt=""
-          />Category
-        </div>
-        <div id="brandstores">
-          <p onclick="cardPage()">Exclusive Brands</p>
-          <p onclick="cardPage()">Stores</p>
-          <p onclick="cardPage()">Deals</p>
-          <p onclick="cardPage()">SHOP Travel</p>
-          <p onclick="cardPage()">Departments</p>
-          <p onclick="cardPage()">ShopBuddy</p>
-          <p onclick="cardPage()">SHOP Local</p>
-        </div>
-        <div class="signordercard">
+  </style>
+  <body>
+    <header id="headersection">
+      <div class="mainheader">
+        <!-- top section of header -->
+        <div class="headertop">
           <div>
-            <!-- <img
+            <img id="logo" onclick=" homepage()" src="finallogo.png" alt="" />
+          </div>
+          <div>
+            <input
+              id="serachbox"
+              type="text"
+              name="Search here"
+              placeholder=" Search SHOP.COM...                                                                                      🔍"
+            />
+          </div>
+          <div>
+            <img src="https://www.shop.com/feo-cdn/Z/t/BZP3JZ4so.webp" alt="" />
+          </div>
+        </div>
+        <!-- here is the bottom part of the header -->
+        <div class="headerbottom">
+          <div>
+            <img
+              id="hambergerimg"
+              src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg"
+              alt=""
+            />Category
+          </div>
+          <div id="brandstores">
+            <p onclick="cardPage()">Exclusive Brands</p>
+            <p onclick="cardPage()">Stores</p>
+            <p onclick="cardPage()">Deals</p>
+            <p onclick="cardPage()">SHOP Travel</p>
+            <p onclick="cardPage()">Departments</p>
+            <p onclick="cardPage()">ShopBuddy</p>
+            <p onclick="cardPage()">SHOP Local</p>
+          </div>
+          <div class="signordercard">
+            <div>
+              <!-- <img
               src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
               alt=""
             /> -->
-            <a href="signup.html"><img
-              src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
-              alt=""
-            /></a>
+              <a href="signup.html"
+                ><img
+                  src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
+                  alt=""
+              /></a>
 
-            <!-- <p><a href="signup.html">Signup</a></p> -->
-            <p onclick="Pagedir()">Signup</p>
-
-          </div>
-          <div>
-            <img 
-              src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
-              alt=""
-            />
-            <p>Order</p>
-          </div>
-          <div>
-            <img 
-              src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
-              alt=""
-            />
-            <p>Cart</p>
+              <!-- <p><a href="signup.html">Signup</a></p> -->
+              <p onclick="Pagedir()">Signup</p>
+            </div>
+            <div>
+              <img
+                src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
+                alt=""
+              />
+              <p>Order</p>
+            </div>
+            <div>
+              <img
+                src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
+                alt=""
+              />
+              <p>Cart</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- header
+    </header>
+    <!-- header
    -->
     <div class="displaytotal">
-      <h3 id="value">Cart price</h3>
-      <h1 id="carttotal">Cart pric</h1></div>
+      <h3 style="padding-top: 10px" id="value">Total Cart price</h3>
+      <!-- <button>Order Now</button> -->
+      <h1 style="padding-top: 10px" id="carttotal">Cart pric</h1>
+    </div>
     <div id="container"></div>
-</body>
+  </body>
 </html>
 <script>
-    let cardItems = JSON.parse(localStorage.getItem("cardProducts"));
-// let newdata=[];
-// newdata = obj;
-// console.log(data)
+  let cardItems = JSON.parse(localStorage.getItem("cardProducts"));
+  // let newdata=[];
+  // newdata = obj;
+  // console.log(data)
 
-displayCard(cardItems);
+  displayCard(cardItems);
 
-// function handlesort(){
-//   let selected = document.querySelector('select').value;
-//   if(selected == "Price_Low_High"){
-//     newdata.sort((a, b) => b.price - a.price);
-//     displayCard(newdata);
-//     console.log(newdata);
+  // function handlesort(){
+  //   let selected = document.querySelector('select').value;
+  //   if(selected == "Price_Low_High"){
+  //     newdata.sort((a, b) => b.price - a.price);
+  //     displayCard(newdata);
+  //     console.log(newdata);
 
-    
-//   }else if(selected == "Price_High_Low"){
-//     newdata.sort((a, b) => { return a.price - b.price});
-//     displayCard(newdata);
-//     console.log(newdata);
-//   }
-//   else{
-//     displayCard(obj)
-//   }
-// }
+  //   }else if(selected == "Price_High_Low"){
+  //     newdata.sort((a, b) => { return a.price - b.price});
+  //     displayCard(newdata);
+  //     console.log(newdata);
+  //   }
+  //   else{
+  //     displayCard(obj)
+  //   }
+  // }
 
+  // function search() {
+  //     let q = document.querySelector("input").value;
+  //     console.log(q);
+  //     let newdatat = bag.filter(function (element) {
+  //       return element.title.toLowerCase().includes(q.toLocaleLowerCase());
+  //     });
+  //     displayCard(newdatat);
+  //   }
+  //  let total = document.querySelector('#carttotal');
 
+  function homepage() {
+    window.location.href = "index.html";
+  }
 
-// function search() {
-//     let q = document.querySelector("input").value;
-//     console.log(q);
-//     let newdatat = bag.filter(function (element) {
-//       return element.title.toLowerCase().includes(q.toLocaleLowerCase());
-//     });
-//     displayCard(newdatat);
-//   }
-//  let total = document.querySelector('#carttotal');
-
- let cartvalue = cardItems.reduce((acc,elem)=> acc+elem.price,0);
- document.querySelector('#carttotal').innerText = Math.floor(cartvalue);
-
+  let cartvalue = cardItems.reduce((acc, elem) => acc + elem.price, 0);
+  document.querySelector("#carttotal").innerText = Math.floor(cartvalue);
 
   function displayCard(data) {
     document.querySelector("#container").innerHTML = "";
@@ -295,15 +287,15 @@ displayCard(cardItems);
       desc.innerText = element.description;
       let cost = document.createElement("p");
       cost.innerText = element.price;
-      cost.style.color = 'red';
-      cost.style.fontSize = '20px'
+      cost.style.color = "red";
+      cost.style.fontSize = "20px";
       let rating = document.createElement("p");
       rating.innerText = element.rating.rate;
 
       let btn = document.createElement("button");
       btn.innerText = "Add to card";
       btn.addEventListener("click", function () {
-       alert('Product already Present in the cart')
+        alert("Product already Present in the cart");
       });
 
       div.append(imgProd, title, desc, cost, rating, btn);
@@ -311,5 +303,4 @@ displayCard(cardItems);
       document.querySelector("#container").append(div);
     });
   }
-  
 </script>
