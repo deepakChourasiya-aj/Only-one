@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cards</title>
-</head>
-<style>
-/* navbar section here  */
+  </head>
+  <style>
+    /* navbar section here  */
 
-
-     body{
-        font-family: 'PT Sans', sans-serif;
-
+    body {
+      font-family: "PT Sans", sans-serif;
     }
-     /* header staret */
-     body{
-        /* background-color: rgb(240, 241, 247); */
-        font-family: 'PT Sans', sans-serif;
-
+    /* header staret */
+    body {
+      /* background-color: rgb(240, 241, 247); */
+      font-family: "PT Sans", sans-serif;
     }
     * {
       margin: 0;
@@ -63,12 +60,12 @@
       align-items: center;
       /* text-align: center; */
     }
- 
-    .headerbottom > div:nth-child(1)>img {
-        position: relative;
-        bottom: -6px;
+
+    .headerbottom > div:nth-child(1) > img {
+      position: relative;
+      bottom: -6px;
     }
-    
+
     .headerbottom > div:nth-child(2) {
       /* border: 3px solid blue; */
       width: 50%;
@@ -89,15 +86,13 @@
       font-size: small;
       cursor: pointer;
     }
-    .signordercard>div:hover{
-        color: aqua;
-
+    .signordercard > div:hover {
+      color: aqua;
     }
     .signordercard {
       display: flex;
       justify-content: space-around;
       font-size: small;
-      
     }
     #headersection {
       background-color: rgb(240, 241, 247);
@@ -105,20 +100,20 @@
       width: 100%;
       background-attachment: fixed;
     }
-    select{
+    select {
       padding: 8px;
-    width: 15%;
-    border: 2px solid wheat;
-    border-radius: 5px;
-    background-color: cornsilk;
-    font-size: larger;
+      width: 15%;
+      border: 2px solid wheat;
+      border-radius: 5px;
+      background-color: cornsilk;
+      font-size: larger;
     }
 
-     /* hader end  */
+    /* hader end  */
 
-     #container {
+    #container {
       display: grid;
-      justify-content:flex-end;
+      justify-content: flex-end;
       align-items: flex-end;
       margin: auto;
       margin-top: 50px;
@@ -127,10 +122,10 @@
       grid-template-rows: auto;
       gap: 20px;
     }
-    .productsorting{
-        padding-top: 150px;
-        padding-left: 50px;
-       }
+    .productsorting {
+      padding-top: 150px;
+      padding-left: 50px;
+    }
     #container > div > img {
       width: 100%;
     }
@@ -144,536 +139,589 @@
     input {
       padding: 0px;
     }
-    button{
+    button:hover {
+      background-color: black;
+    }
+    button {
       background-color: #414467;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 20px;
-    width: 105px;
-    height: 33px;
-       }
-       /* product sorting here comes  */
-      
-</style>
-<body>
-
-  <!-- header section start 
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 20px;
+      width: 105px;
+      height: 33px;
+    }
+    /* product sorting here comes  */
+    /* div:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  } */
+    #brandstores > p:hover {
+      color: rgb(227, 0, 0);
+    }
+  </style>
+  <body>
+    <!-- header section start 
    -->
-   <header id="headersection">
-    <div class="mainheader">
-      <!-- top section of header -->
-      <div class="headertop">
-        <div>
-          <img
-            id="logo"
-            src="https://img.shop.com/Image/resources/logos/shop-logo-us-thanksgiving.svg"
-            alt=""
-          />
-        </div>
-        <div>
-          <input
-            id="serachbox"
-            type="text"
-            name="Search here"
-            placeholder=" Search SHOP.COM...                                                                                      🔍"
-          />
-        </div>
-        <div>
-          <img src="https://www.shop.com/feo-cdn/Z/t/BZP3JZ4so.webp" alt="" />
-        </div>
-      </div>
-      <!-- here is the bottom part of the header -->
-      <div class="headerbottom">
-        <div>
-          <img
-            id="hambergerimg"
-            src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg"
-            alt=""
-          />Category
-        </div>
-        <div id="brandstores">
-          <p onclick="cardPage()">Exclusive Brands</p>
-          <p onclick="cardPage()">Stores</p>
-          <p onclick="cardPage()">Deals</p>
-          <p onclick="cardPage()">SHOP Travel</p>
-          <p onclick="cardPage()">Departments</p>
-          <p onclick="cardPage()">ShopBuddy</p>
-          <p onclick="cardPage()">SHOP Local</p>
-        </div>
-        <div class="signordercard">
+    <header id="headersection">
+      <div class="mainheader">
+        <!-- top section of header -->
+        <div class="headertop">
           <div>
-            <!-- <img
+            <img onclick=" homepage()" id="logo" src="finallogo.png" alt="" />
+          </div>
+          <div>
+            <input
+              id="serachbox"
+              type="text"
+              name="Search here"
+              placeholder=" Search SHOP.COM...                                                                                      🔍"
+            />
+          </div>
+          <div>
+            <img
+              onclick=" homepage()"
+              src="https://www.shop.com/feo-cdn/Z/t/BZP3JZ4so.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- here is the bottom part of the header -->
+        <div class="headerbottom">
+          <div>
+            <img
+              id="hambergerimg"
+              src="https://img.shop.com/Image/resources/images/icon-menu-24px.svg"
+              alt=""
+            />Category
+          </div>
+          <div id="brandstores">
+            <p onclick="cardPage()">Exclusive Brands</p>
+            <p onclick="cardPage()">Stores</p>
+            <p onclick="cardPage()">Deals</p>
+            <p onclick="cardPage()">SHOP Travel</p>
+            <p onclick="cardPage()">Departments</p>
+            <p onclick="cardPage()">ShopBuddy</p>
+            <p onclick="cardPage()">SHOP Local</p>
+          </div>
+          <div class="signordercard">
+            <div>
+              <!-- <img
               src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
               alt=""
             /> -->
-            <a href="signup.html"><img
-              src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
-              alt=""
-            /></a>
+              <a href="signup.html"
+                ><img
+                  src="https://img.shop.com/Image/resources/images/icon-account-circle-24px.svg"
+                  alt=""
+              /></a>
 
-            <!-- <p><a href="signup.html">Signup</a></p> -->
-            <p onclick="Pagedir()">Signup</p>
-
-          </div>
-          <div>
-            <img 
-              src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
-              alt=""
-            />
-            <p>Order</p>
-          </div>
-          <div>
-            <img 
-              src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
-              alt=""
-            />
-            <p>Cart</p>
+              <!-- <p><a href="signup.html">Signup</a></p> -->
+              <p>Signup</p>
+            </div>
+            <div>
+              <img
+                onclick="cardorderpage()"
+                src="https://img.shop.com/Image/resources/images/icon-orders-24px.svg"
+                alt=""
+              />
+              <p>Order</p>
+            </div>
+            <div>
+              <img
+                onclick="cardorderpage()"
+                src="https://img.shop.com/Image/resources/images/icon-shopping-cart-24px.svg"
+                alt=""
+              />
+              <p>Cart</p>
+            </div>
           </div>
         </div>
       </div>
+    </header>
+    <!-- header end there -->
+
+    <!-- applying sorting  -->
+    <div class="productsorting">
+      <select name="sort" onChange="handlesort()" id="Productsort">
+        <option value="All_items">All items</option>
+        <option value="Price_Low_High">Price High-Low</option>
+        <option value="Price_High_Low">Price Low-High</option>
+      </select>
     </div>
-  </header>
-   <!-- header end there -->
 
-   <!-- applying sorting  -->
-   <div class="productsorting">
-    <select name="sort" onChange="handlesort()" id="Productsort">
-       <option value="All_items">All items</option>
-       <option value="Price_Low_High">Price High-Low</option>
-       <option value="Price_High_Low">Price Low-High </option>
-
-    </select>
-   </div>
-
-
-   <!-- applying sorting  -->
-  <!-- <button><a href="cards.html">Cart_items</a></button> -->
-  <!-- <input
+    <!-- applying sorting  -->
+    <!-- <button><a href="cards.html">Cart_items</a></button> -->
+    <!-- <input
     type="text"
     oninput="search()"
     id="search"
     placeholder="Search Products "
   /> -->
-  <!-- <select name="" id="sorting" onChange="handleSort()">
+    <!-- <select name="" id="sorting" onChange="handleSort()">
     <option value="HTL">HTL</option>
     <option value="LTH">LTH</option>
   </select> -->
-  <div id="container"></div>
-</body>
+    <div id="container"></div>
+  </body>
 </html>
 <script>
-    let obj = [
-  {
-    "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Diane Von Furstenberg Womens Jess Ribbed Lightweight Crewneck Sweater",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/250000/253200/253251/products/1938912055.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3.9,
-      "count": 120
-    }
-  },
-  {
-    "id": 2,
-    "title": "Mens Casual Premium Slim Fit T-Shirts ",
-    "price": 22.3,
-    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weiket.",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/278100/278132/products/1937393691.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.1,
-      "count": 259
-    }
-  },
-  {
-    "id": 3,
-    "title": "Mens Cotton Jacket",
-    "price": 109.95,
-    "description": "great family member.and or son in this thanksgiving or Christmas Day.",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/274900/274929/products/1924803450.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.7,
-      "count": 500
-    }
-  },
-  {
-    "id": 4,
-    "title": "Mens Casual Slim Fit",
-    "price": 99.5,
-    "description": "The color could be slightly different between on  description.",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/278100/278132/products/1917738010.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.1,
-      "count": 430
-    }
-  },
-  {
-    "id": 5,
-    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-    "price": 109.95,
-    "description": "From  with love and abundance, or outward for protection.",
-    "category": "jewelery",
-    "image": "https://img.shop.com/Image/270000/278100/278132/products/1921791739.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.6,
-      "count": 400
-    }
-  },
-  {
-    "id": 6,
-    "title": "Solid Gold Petite Micropave ",
-    "price":168,
-    "description": "Sati Satisfaction Guaranteed. within 30 days.",
-    "category": "jewelery",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1951359279.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3.9,
-      "count": 70
-    }
-  },
-  {
-    "id": 7,
-    "title": "White Gold Plated Princess",
-    "price": 9.9,
-    "description": "Womens",
-    "category": "jewelery",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1931094739.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3,
-      "count": 400
-    }
-  },
-  {
-    "id": 8,
-    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-    "price":109.95,
-    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/250000/253200/253251/products/1938895725.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 1.9,
-      "count": 100
-    }
-  },
-  {
-    "id": 9,
-    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-    "price":70,
-    "description": "USB 3.0vary depending on user’s hardware configuration and operating system",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/274900/274929/products/1918999000.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3.3,
-      "count": 203
-    }
-  },
-  {
-    "id": 10,
-    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-    "price": 100.5,
-    "description": "Easy upgrade for faster boot up, shutdown,  upon  OS and application.)",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1871747002.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.9,
-      "count": 470
-    }
-  },
-  {
-    "id": 11,
-    "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-    "price": 70.5,
-    "description": "3D NAND fto provide the optimized performance and enhanced reliability.",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1843389079.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.8,
-      "count": 319
-    }
-  },
-  {
-    "id": 12,
-    "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-    "price": 110.5,
-    "description": "Lightwo it.Attached awstrings give it a real styled look capacity",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/250000/253200/253251/products/1938907220.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.8,
-      "count": 400
-    }
-  },
-  {
-    "id": 13,
-    "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-    "price": 595,
-    "description": "Lightwo it.Attached awstrings give it a real styled look",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1842572877.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.9,
-      "count": 250
-    }
-  },
-  {
-    "id": 14,
-    "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-    "price": 999,
-    "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon degree 75 hertz",
-    "category": "Womens",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1843389079.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.2,
-      "count": 140
-    }
-  },
-  {
-    "id": 15,
-    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-    "price": 109.95,
-    "description": " It is suitable for different season and help you adapt to different climates",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943472049.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.6,
-      "count": 235
-    }
-  },
-  {
-    "id": 16,
-    "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-    "price": 113.5,
-    "description": "100 sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943472043.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 2.9,
-      "count": 340
-    }
-  },
-  {
-    "id": 17,
-    "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-    "price": 113.5,
-    "description": "Lightwo it.Attached awstrings give it a real styled look.",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943472083.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3.8,
-      "count": 679
-    }
-  },
-  {
-    "id": 18,
-    "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-    "price": 109.95,
-    "description": "95% RAYO Double stitching on bottom hem",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943471861.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.7,
-      "count": 130
-    }
-  },
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 70.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943472049.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  {
-    "id": 20,
-    "title": "DANVOUY Womens T Shirt Casual Cotton Short",
-    "price": 113.5,
-    "description": "Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewellery",
-    "image": "https://img.shop.com/Image/280000/282000/282022/products/1943472043.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 3.6,
-      "count": 145
+  let obj = [
+    {
+      id: 1,
+      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      price: 109.95,
+      description:
+        "Diane Von Furstenberg Womens Jess Ribbed Lightweight Crewneck Sweater",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/250000/253200/253251/products/1938912055.jpg?plain&size=400x400",
+      rating: {
+        rate: 3.9,
+        count: 120,
+      },
+    },
+    {
+      id: 2,
+      title: "Mens Casual Premium Slim Fit T-Shirts ",
+      price: 22.3,
+      description:
+        "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weiket.",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/278100/278132/products/1937393691.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.1,
+        count: 259,
+      },
+    },
+    {
+      id: 3,
+      title: "Mens Cotton Jacket",
+      price: 109.95,
+      description:
+        "great family member.and or son in this thanksgiving or Christmas Day.",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/274900/274929/products/1924803450.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.7,
+        count: 500,
+      },
+    },
+    {
+      id: 4,
+      title: "Mens Casual Slim Fit",
+      price: 99.5,
+      description:
+        "The color could be slightly different between on  description.",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/278100/278132/products/1917738010.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.1,
+        count: 430,
+      },
+    },
+    {
+      id: 5,
+      title:
+        "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      price: 109.95,
+      description: "From  with love and abundance, or outward for protection.",
+      category: "jewelery",
+      image:
+        "https://img.shop.com/Image/270000/278100/278132/products/1921791739.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.6,
+        count: 400,
+      },
+    },
+    {
+      id: 6,
+      title: "Solid Gold Petite Micropave ",
+      price: 168,
+      description: "Sati Satisfaction Guaranteed. within 30 days.",
+      category: "jewelery",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1951359279.jpg?plain&size=400x400",
+      rating: {
+        rate: 3.9,
+        count: 70,
+      },
+    },
+    {
+      id: 7,
+      title: "White Gold Plated Princess",
+      price: 9.9,
+      description: "Womens",
+      category: "jewelery",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1931094739.jpg?plain&size=400x400",
+      rating: {
+        rate: 3,
+        count: 400,
+      },
+    },
+    {
+      id: 8,
+      title: "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      price: 109.95,
+      description:
+        "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/250000/253200/253251/products/1938895725.jpg?plain&size=400x400",
+      rating: {
+        rate: 1.9,
+        count: 100,
+      },
+    },
+    {
+      id: 9,
+      title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+      price: 70,
+      description:
+        "USB 3.0vary depending on user’s hardware configuration and operating system",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/274900/274929/products/1918999000.jpg?plain&size=400x400",
+      rating: {
+        rate: 3.3,
+        count: 203,
+      },
+    },
+    {
+      id: 10,
+      title: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      price: 100.5,
+      description:
+        "Easy upgrade for faster boot up, shutdown,  upon  OS and application.)",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1871747002.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.9,
+        count: 470,
+      },
+    },
+    {
+      id: 11,
+      title:
+        "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      price: 70.5,
+      description:
+        "3D NAND fto provide the optimized performance and enhanced reliability.",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1843389079.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.8,
+        count: 319,
+      },
+    },
+    {
+      id: 12,
+      title:
+        "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      price: 110.5,
+      description:
+        "Lightwo it.Attached awstrings give it a real styled look capacity",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/250000/253200/253251/products/1938907220.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.8,
+        count: 400,
+      },
+    },
+    {
+      id: 13,
+      title: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+      price: 595,
+      description: "Lightwo it.Attached awstrings give it a real styled look",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1842572877.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.9,
+        count: 250,
+      },
+    },
+    {
+      id: 14,
+      title:
+        "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      price: 999,
+      description:
+        "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon degree 75 hertz",
+      category: "Womens",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1843389079.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.2,
+        count: 140,
+      },
+    },
+    {
+      id: 15,
+      title: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      price: 109.95,
+      description:
+        " It is suitable for different season and help you adapt to different climates",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943472049.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.6,
+        count: 235,
+      },
+    },
+    {
+      id: 16,
+      title:
+        "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      price: 113.5,
+      description:
+        "100 sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943472043.jpg?plain&size=400x400",
+      rating: {
+        rate: 2.9,
+        count: 340,
+      },
+    },
+    {
+      id: 17,
+      title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+      price: 113.5,
+      description: "Lightwo it.Attached awstrings give it a real styled look.",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943472083.jpg?plain&size=400x400",
+      rating: {
+        rate: 3.8,
+        count: 679,
+      },
+    },
+    {
+      id: 18,
+      title: "MBJ Women's Solid Short Sleeve Boat Neck V ",
+      price: 109.95,
+      description: "95% RAYO Double stitching on bottom hem",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943471861.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.7,
+        count: 130,
+      },
+    },
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 70.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943472049.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    {
+      id: 20,
+      title: "DANVOUY Womens T Shirt Casual Cotton Short",
+      price: 113.5,
+      description:
+        "Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      category: "jewellery",
+      image:
+        "https://img.shop.com/Image/280000/282000/282022/products/1943472043.jpg?plain&size=400x400",
+      rating: {
+        rate: 3.6,
+        count: 145,
+      },
+    },
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 181.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1738810714.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 113.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1728866768.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 70.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1907897282.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 109.95,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1789309869.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 7.95,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1947470581.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 109.95,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1952443181.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 70.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1921892816.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 70.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1947850714.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 70.5,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/260000/267800/267870/products/1908996105.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+    ,
+    {
+      id: 19,
+      title: "Opna Women's Short Sleeve Moisture",
+      price: 109.95,
+      description: " feminine silhouette and Added Comfort",
+      category: "boots",
+      image:
+        "https://img.shop.com/Image/270000/273200/273200/products/1928789006.jpg?plain&size=400x400",
+      rating: {
+        rate: 4.5,
+        count: 146,
+      },
+    },
+  ];
+
+  // displaying cards data there
+
+  let cardItems = JSON.parse(localStorage.getItem("cardProducts")) || [];
+  let newdata = [];
+  newdata = obj;
+  // console.log(data)
+
+  displayCard(obj);
+
+  function handlesort() {
+    let selected = document.querySelector("select").value;
+    if (selected == "Price_Low_High") {
+      newdata.sort((a, b) => b.price - a.price);
+      displayCard(newdata);
+      console.log(newdata);
+    } else if (selected == "Price_High_Low") {
+      newdata.sort((a, b) => {
+        return a.price - b.price;
+      });
+      displayCard(newdata);
+      console.log(newdata);
+    } else {
+      displayCard(obj);
     }
   }
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price":181.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1738810714.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 113.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1728866768.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price":70.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1907897282.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 109.95,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1789309869.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 7.95,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1947470581.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 109.95,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1952443181.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price":70.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1921892816.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price":70.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1947850714.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 70.5,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/260000/267800/267870/products/1908996105.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  ,
-  {
-    "id": 19,
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 109.95,
-    "description": " feminine silhouette and Added Comfort",
-    "category": "boots",
-    "image": "https://img.shop.com/Image/270000/273200/273200/products/1928789006.jpg?plain&size=400x400",
-    "rating": {
-      "rate": 4.5,
-      "count": 146
-    }
-  },
-  
-]
 
-// displaying cards data there 
-
-let cardItems = JSON.parse(localStorage.getItem("cardProducts")) || [];
-let newdata=[];
-newdata = obj;
-// console.log(data)
-
-displayCard(obj);
-
-function handlesort(){
-  let selected = document.querySelector('select').value;
-  if(selected == "Price_Low_High"){
-    newdata.sort((a, b) => b.price - a.price);
-    displayCard(newdata);
-    console.log(newdata);
-
-    
-  }else if(selected == "Price_High_Low"){
-    newdata.sort((a, b) => { return a.price - b.price});
-    displayCard(newdata);
-    console.log(newdata);
+  // function search() {
+  //     let q = document.querySelector("input").value;
+  //     console.log(q);
+  //     let newdatat = bag.filter(function (element) {
+  //       return element.title.toLowerCase().includes(q.toLocaleLowerCase());
+  //     });
+  //     displayCard(newdatat);
+  //   }
+  function cardPage(){
+    window.location.href = 'index.html'
   }
-  else{
-    displayCard(obj)
-  }
-}
-
-
-
-// function search() {
-//     let q = document.querySelector("input").value;
-//     console.log(q);
-//     let newdatat = bag.filter(function (element) {
-//       return element.title.toLowerCase().includes(q.toLocaleLowerCase());
-//     });
-//     displayCard(newdatat);
-//   }
 
   function displayCard(data) {
     document.querySelector("#container").innerHTML = "";
@@ -687,8 +735,8 @@ function handlesort(){
       desc.innerText = element.description;
       let cost = document.createElement("p");
       cost.innerText = element.price;
-      cost.style.color = 'red';
-      cost.style.fontSize = '20px'
+      cost.style.color = "red";
+      cost.style.fontSize = "20px";
       let rating = document.createElement("p");
       rating.innerText = element.rating.rate;
 
@@ -704,7 +752,12 @@ function handlesort(){
       document.querySelector("#container").append(div);
     });
   }
-  
 
+  function homepage() {
+    window.location.href = "index.html";
+  }
 
+  function cardorderpage() {
+    window.location.href = onclick = "cardsorderPage.html";
+  }
 </script>

@@ -9,7 +9,7 @@ formdata.addEventListener('submit',function(){
     
     for(let i=0;i<lsdata.length;i++){
         if(entered_email== lsdata[i].email && enter_password==lsdata[i].password){
-           alert('You have successfully login');
+           alert('You have successfully login',gotohome());
            break;
         }
         else if(entered_email==lsdata[i].email){
@@ -32,7 +32,9 @@ formdata.addEventListener('submit',function(){
         }
     }
 })
-
+function gotohome(){
+    window.location.href = 'index.html';
+}
 
 // -----------------------------------------------------------------------------------------------------
 // formdata.addEventListener("submit", function () {

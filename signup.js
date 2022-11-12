@@ -15,7 +15,8 @@ formdata.addEventListener('submit',function(){
         // return;
     }   
      if(formdata.email.value!='' && formdata.password.value!=''){
-         alert('You have Sign in Successfully')
+         alert('You have Sign in Successfully',gotohome())
+        //  gotohome()
      }
     let obj={
         email:formdata.email.value,
@@ -28,7 +29,9 @@ formdata.addEventListener('submit',function(){
 
 console.log(lsdata);
 
-
+function gotohome(){
+    window.location.href = 'index.html';
+}
 // --------------------------------------------------------------------------------------data saved--------------------------
 
 // let formdata = document.querySelector('#form');
